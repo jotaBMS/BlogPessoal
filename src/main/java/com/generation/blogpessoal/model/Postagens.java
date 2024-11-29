@@ -4,16 +4,19 @@ import java.time.LocalDateTime;
 
 import org.hibernate.annotations.UpdateTimestamp;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
 
-@Entity
-@Table(name = "tb_postagens")
+@Entity // faz isso ser uma tabela no banco de dados 
+@Table(name = "tb_postagens") // essa tag da um noma pra tabela
 public class Postagens {
 	
 	@Id
@@ -31,7 +34,17 @@ public class Postagens {
 	@UpdateTimestamp
 	private LocalDateTime data;
 	
+	@ManyToOne //anotação para achave estrangeira na tabela tema
+	@JsonIgnoreProperties("postagens") //anotação para não deixar uma resposta em loop no Json
+	private Tema tema;
 	
+	
+	public Tema getTema() {
+		return tema;
+	}
+	public void setTema(Tema tema) {
+		this.tema = tema;
+	}
 	public Long getId() {
 		return id;
 	}
