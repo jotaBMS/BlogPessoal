@@ -9,6 +9,7 @@ import java.util.Map;
 import java.util.function.Function;
 
 import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.stereotype.Component;
 
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
@@ -18,7 +19,7 @@ import io.jsonwebtoken.security.Keys;
 
 public class JwtService {
 	
-	public static final String SECRET = "5367566B59703373367639792F423F4528482B4D6251655468576D5A71347437";
+	public static final String SECRET = "F9965AD4AC497EE15B67F31BA8AAB";
 	
 	private Key getSignKey() {
 		byte[] KeyBytes = Decoders.BASE64.decode(SECRET);
