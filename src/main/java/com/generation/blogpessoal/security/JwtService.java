@@ -17,6 +17,7 @@ import io.jsonwebtoken.SignatureAlgorithm;
 import io.jsonwebtoken.io.Decoders;
 import io.jsonwebtoken.security.Keys;
 
+@Component
 public class JwtService {
 	
 	public static final String SECRET = "F9965AD4AC497EE15B67F31BA8AAB";
