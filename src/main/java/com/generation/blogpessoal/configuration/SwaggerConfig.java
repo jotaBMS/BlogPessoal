@@ -27,11 +27,11 @@ public class SwaggerConfig {
 								.name("Generation Brasil")
 								.url("https://brazil.generation.org"))
 						.contact(new Contact()
-								.name("Generation Brasil")
-								.url("https://github.com/conteudoGeneration.org")))
+								.name("joão Bispo")
+								.url("https://github.com/jotaBMS")))
 				.externalDocs(new ExternalDocumentation()
 						.description("Github")
-						.url("https://github.com/conteudoGeneration/"));
+						.url("https://github.com/jotaBMS/BlogPessoal/"));
 		
 	}
 	
